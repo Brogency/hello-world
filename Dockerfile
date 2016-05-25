@@ -1,9 +1,8 @@
-FROM ubuntu:latest
-MAINTAINER Shekhar Gulati "shekhargulati84@gmail.com"
-RUN apt-get update -y
-RUN apt-get install -y python-pip python-dev build-essential
-COPY . /app
+FROM python:3
+RUN mkdir /app
 WORKDIR /app
+ADD requirements.txt ./
 RUN pip install -r requirements.txt
+ADD . ./
 ENTRYPOINT ["python"]
 CMD ["app.py"]
