@@ -6,3 +6,4 @@ RUN pip install -r requirements.txt
 ADD . ./
 ENTRYPOINT ["python"]
 CMD ["app.py"]
+EXPOSE 5000
