@@ -1,6 +1,4 @@
-FROM python:3
-RUN apt-get update -y && \
-    apt-get install -y dnsutils
+FROM python:3.6-alpine
 RUN mkdir /app
 WORKDIR /app
 ADD requirements.txt ./
